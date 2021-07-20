@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      parent div
+      <ul>
+        parent ul
+        <li>
+          parent li
+          <p>
+            parent p
+            <span>span</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div id="div2">
+      parent div2
+      <div id="div3">div3</div>
+      <div>divdiv</div>
+    </div>
+
+    <div id="div4">
+      div h
+      <h1>h</h1>
+    </div>
+
+    <button id="btn">click</button>
+    <button id="btn1">click</button>
+
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(function () {
+        $("#btn").click(function () {
+            $('span').parent().css('border','1px solid yellow');
+            $('span').parents().css('color','blue');
+            $('span').parents("#div1").css('border','1px solid red');
+            $('span').parentsUntil('#div1').css('border','1px solid black');
+        });
+        $('#btn1').click(function(){
+            $('#div1').children().css('color','red');
+            $('#div2').children('#div3').css('border', '1px solid black');
+            $('#div1').find('span').css('border', '1px solid black');
+            $('#div2').children('*').css('color','yellow');
+            $('#div3').siblings().css('background-color', 'green');
+        })
+     
+// next() nextUntill() nextAll()
+// prev() prevAll() prevUntil()
+
+
+
+      });
+    </script>
+  </body>
+</html>
