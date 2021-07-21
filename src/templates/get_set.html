@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>get set</title>
-</head>
-<body>
+  </head>
+  <body>
     <p id="p1">java<b>script</b></p>
-    <p id="p2">Html</p>
+    <p id="p2">html</p>
     <p id="p3">css</p>
-    <br>
-    <input type="text" id="txt" value="hello">
-    <br><br>
+    <br />
+    <input type="text" id="txt" value="hello" />
+    <br /><br />
     <button id="btn">click</button>
-    <br><br>
+    <br /><br />
     <a id="events" href="event.html" target="_blank">JQuery events</a>
-    <br>
+    <br />
 
     <script src="../js/jquery.js"></script>
-    <script src="../js/get_set.js"></script>
-</body>
+    <script>
+      $(function () {
+        $("#btn").click(function () {
+          var a = $("#p1").text();
+          var b = $("#p1").html();
+          var i = $("#txt").val();
+          var atr = $("#events").attr("href");
+          alert(a + " " + b + " " + i + " " + atr);
+          $("#p2").text("<b>salam</b>");
+          $("#p3").html("<b>salam</b>");
+          $("#p3").attr("id", "changed");
+          $("#events").attr({
+            href: "index.html",
+            target: "_self",
+          });
+          $("#txt").val("salam");
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,26 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <div id="div1">
-        salam
-    </div>
-    <div id="div2">
-        sagol
-    </div>
-    <br><br>
+  <body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <br /><br />
     <button id="btn">click</button>
     <button id="btn1">proxy button</button>
 
     <script src="../js/jquery.js"></script>
-    <script src="../js/event.js"></script>
-</body>
+    <script>
+      $(function () {
+        $("#div1").on({
+          click: function () {
+            console.log("click");
+          },
+          mouseenter: function () {
+            $("#div1").css("color", "red");
+          },
+          mouseleave: function () {
+            $("#div1").css("color", "yellow");
+          },
+        });
 
+        $("#btn").click(function () {
+          $("#div1").off("mouseleave");
+        });
+
+        $("#div2").one({
+          click: function () {
+            console.log("click");
+          },
+          mouseenter: function () {
+            $("#div2").css("color", "red");
+          },
+          mouseleave: function () {
+            $("#div2").css("color", "yellow");
+          },
+        });
+
+        var obj = {
+          name: "zumrud",
+          age: 38,
+          change: function () {
+            $("#div1").css("color", "black");
+          },
+        };
+
+        $("#btn1").click($.proxy(obj, "change"));
+      });
+    </script>
+  </body>
 </html>

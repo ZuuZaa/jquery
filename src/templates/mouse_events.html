@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse events</title>
+    <style>
+      #div1 {
+        width: auto;
+        background-color: blueviolet;
+        height: 300px;
+      }
+      #div2 {
+        width: 300px;
+        background-color: cadetblue;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2"></div>
+    </div>
+    <br /><br />
+    <input type="text" id="text" />
+    <br />
+    <button id="btn">click</button>
+
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(function () {
+        $("#btn").dblclick(function () {
+          $("#div1").css("background-color", "red");
+        });
+        $("#div1").mouseenter(function () {
+          $("#div1").css("background-color", "yellow");
+        }); //mouseover or hover
+        $("#div1").mouseleave(function () {
+          $("#div1").css("background-color", "blue");
+        }); //mouseout
+        $("#div2").mousedown(function () {
+          $("#div2").css("background-color", "yellow");
+        });
+        $("#div2").mouseup(function () {
+          $("#div2").css("background-color", "green");
+        });
+        $("#text").keypress(function () {
+          $("#div2").css("border", "1px solid black");
+        });
+        $("#text").keyup(function () {
+          $("#div1").css("border", "1px solid black");
+        });
+      });
+    </script>
+  </body>
+</html>
