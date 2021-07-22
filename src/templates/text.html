@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            position: relative;
+        }
+        #h-div {
+            position: absolute;
+            top: 0;
+            left: 10%;
+            margin: 0;
+            z-index: -1;
+            font-size: 5rem;
+        }
+        #zumrud-div {
+            position: absolute;
+            z-index: 2;
+            top: 70%;
+            right: 0;
+            font-size: 5rem;
+            overflow: hidden;
+        }
+        #hello-tag, #zumrud-tag {
+            margin: 0;
+        }
+
+        #img-container {
+            display: flex;
+            justify-content: center;
+        }
+        #img-div {
+            width: 480px;
+            height: 640px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="h-div"><h1 id="hello-tag">hello</h1></div>
+      <div id="img-container">
+        <div id="img-div">
+          <img src="./profil.gif" alt="" />
+        </div>
+      </div>
+      <div id="zumrud-div"><h1 id="zumrud-tag">I'm Zumrud.</h1></div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script>
+      $(function () {
+        $("#h-div").animate(
+          {
+            left: "70%",
+          },
+          3000
+        );
+        $("#zumrud-div").animate(
+          {
+            right: "60%",
+          },
+          3000
+        );
+      });
+
+      //https://stackoverflow.com/questions/16981763/invert-css-font-color-depending-on-background-color
+    </script>
+  </body>
+</html>

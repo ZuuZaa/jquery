@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ESTILOS CONTRASTADOS CSS3</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .titulo {
+        text-align: center;
+        margin: 2em;
+      }
+      .padre {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10em;
+        position: relative;
+        width: 1000px;
+        height: 500px;
+      }
+      .caja-1 {
+        background-color: black;
+        width: 500px;
+        height: 500px;
+        left: 0;
+        mix-blend-mode: screen;
+        position: absolute;
+      }
+      .caja-3 {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        background-color: white;
+        position: absolute;
+        right: 0;
+      }
+      .texto {
+        font-size: 5em;
+        color: white;
+        mix-blend-mode: difference;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="titulo">MIX-BLEND-MODE CSS EFFECT</h1>
+    <div class="padre">
+      <div class="caja-1"></div>
+      <div class="caja-3"></div>
+      <h1 class="texto">CODE STOCK CENTER</h1>
+    </div>
+  </body>
+</html>
