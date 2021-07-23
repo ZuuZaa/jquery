@@ -23,14 +23,11 @@
         margin: 0;
       }
       #zumrud-div {
-          
-        mix-blend-mode:difference;
-        isolation: isolate;
+        mix-blend-mode: difference;
         z-index: 2;
         margin-right: 0;
         margin-top: -300px;
         padding-right: 4%;
-        overflow: hidden;
       }
       #hello-tag,
       #zumrud-tag {
@@ -52,21 +49,24 @@
       #img-div {
         width: 480px;
         height: 640px;
+        filter: grayscale(100%);
+
       }
 
       #divdiv {
-          background-color: black;
-          background-image: url('./profil.gif');
-          background-position:0 54%;
+        background-color: black;
+        background-image: url("./profil.gif");
+        background-position: 0 54%;
       }
       #divdiv div {
-          background-color: white;
-        mix-blend-mode:difference;
+        background-color: white;
+        mix-blend-mode: difference;
       }
       #hh {
-        
-  color:black;
-  font-size:80px;
+          padding-left: 4%;
+        text-align: left;
+        color: black;
+        font-size: 80px;
       }
     </style>
   </head>
@@ -112,10 +112,8 @@
     <p>salam</p>
     <p>salam</p>
 
-
     <div id="divdiv">
-        <div><h1 id="hh">hello</h1></div>
-        
+      <div><h1 id="hh">see you</h1></div>
     </div>
 
     <script src="../js/jquery.js"></script>
