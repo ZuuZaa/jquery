@@ -12,10 +12,10 @@
           "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
+      }
+      #hello {
         background-color: black;
         color: whitesmoke;
-      }
-      #container {
       }
       #h-div {
         padding-left: 20%;
@@ -25,8 +25,8 @@
       #zumrud-div {
         mix-blend-mode: difference;
         z-index: 2;
+        margin-top: -30%;
         margin-right: 0;
-        margin-top: -300px;
         padding-right: 4%;
       }
       #hello-tag,
@@ -47,10 +47,15 @@
         justify-content: center;
       }
       #img-div {
+        background-image: url("./profil.gif");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #ccc;
+        background-size: contain;
         width: 480px;
         height: 640px;
         filter: grayscale(100%);
-
+        box-shadow: 0 0 8px 8px black inset;
       }
 
       #divdiv {
@@ -63,7 +68,7 @@
         mix-blend-mode: difference;
       }
       #hh {
-          padding-left: 4%;
+        padding-left: 4%;
         text-align: left;
         color: black;
         font-size: 80px;
@@ -71,17 +76,18 @@
     </style>
   </head>
   <body>
-    <div id="container">
-      <div id="h-div">
-        <div id="hello-tag">hello</div>
-      </div>
-      <div id="img-container">
-        <div id="img-div">
-          <img src="./profil.gif" alt="" />
+    <section id="hello">
+      <div id="container">
+        <div id="h-div">
+          <div id="hello-tag">hello</div>
         </div>
+        <div id="img-container">
+          <div id="img-div"></div>
+        </div>
+        <div id="zumrud-div"><div id="zumrud-tag">I'm Zumrud.</div></div>
       </div>
-      <div id="zumrud-div"><div id="zumrud-tag">I'm Zumrud.</div></div>
-    </div>
+    </section>
+    <section id="portfolio"></section>
     <p>salam</p>
     <p>salam</p>
     <p>salam</p>
