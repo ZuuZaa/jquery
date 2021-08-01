@@ -33,4 +33,21 @@ $(function () {
   $("#btn4").click(function () {
     $("#div1").stop();
   });
+  //----- call back --------
+  $("#btn5").click(function () {
+    $("#div1").hide(4000, function () {
+      alert("it is hidden");
+      $(this).show(4000, function () {
+        $(this).fadeOut(4000, function () {
+          $(this).fadeIn(4000);
+        });
+      });
+    });
+  });
+  // ----- chaining -------
+  $("#btn6").click(function () {
+    setInterval(function () {
+      $("#div1").hide(2000).show(2000).fadeOut(2000).fadeIn(2000);
+    }, 8000);
+  });
 });
