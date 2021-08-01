@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="div1" class="c1">d1 c1</div>
     <div id="div2" class="c2">d2 c2</div>
     <div id="div3" class="c3">d3 c3</div>
@@ -14,19 +14,6 @@
     <button id="btn">click</button>
 
     <script src="../js/jquery.js"></script>
-    <script>
-        $(function(){
-            $('#btn').click(function(){
-                $('div').first().css('color', 'red');
-                $('div').eq(1).css('border','1px solid yellow');
-                $('div').last().css('background-color', 'green');
-                $('div').filter('.c2').css('color', 'yellow');
-                $('div').not('.c3').css('background-color', 'yellow');
-            })
-        })
-
-
-    </script>
-    
-</body>
+    <script src="../js/filtering.js"></script>
+  </body>
 </html>

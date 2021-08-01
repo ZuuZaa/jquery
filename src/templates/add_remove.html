@@ -7,12 +7,12 @@
     <title>Document</title>
 
     <style>
-        .red {
-            color:crimson;
-        }
-        .blue {
-            color:darkblue;
-        }
+      .red {
+        color: crimson;
+      }
+      .blue {
+        color: darkblue;
+      }
     </style>
   </head>
   <body>
@@ -24,62 +24,21 @@
     </div>
     <button id="btn">click</button>
     <div id="div2">
-        <p id="p5">salam</p>
-        <p id="p6">salam</p>
-        <p id="p7">salam</p>
-        <p id="p8">salam</p>
-      </div>
-      <button id="btn2">click</button>
+      <p id="p5">salam</p>
+      <p id="p6">salam</p>
+      <p id="p7">salam</p>
+      <p id="p8">salam</p>
+    </div>
+    <button id="btn2">click</button>
 
-      <div id="di3">
-          <p id="p10"> salam</p>
-          <p id="p11" class="blue"> salam</p>
-          <p id="p12" class="red">salam</p>
-      </div>
+    <div id="di3">
+      <p id="p10">salam</p>
+      <p id="p11" class="blue">salam</p>
+      <p id="p12" class="red">salam</p>
+    </div>
     <button id="btn3">click</button>
 
     <script src="../js/jquery.js"></script>
-    <script>
-      $(function () {
-        $("#btn").click(function () {
-          $("#div1").append("js");
-          $("#div1").prepend("js");
-          $("#div1").after("html");
-          $("#div1").before("css");
-          $("#p1").remove();
-          $("p").remove("#p2");
-
-          var t1 = "<p>p5</p>";
-          var t2 = $("<p>").text("p6");
-          var t3 = (document.createElement("p").innerText = "p7");
-          $('#div1').append(t2,t3);
-          $('#div1').prepend(t1);
-        });
-
-        $('#btn2').click(function(){
-            $('<p id="p0">p0</p>').appendTo('#div2');
-            $('<span>hi</span>').prependTo('#div2');
-            //$('<span>hi</span>').replaceAll('p');
-            //or
-            //$('p').replaceWith('<p>ola</p>');
-            $('#p1').clone().appendTo('#div1');
-            
-        });
-
-        $('#btn3').click(function(){
-            $('#p10').addClass('red');
-            //$('#p11').removeClass('blue');
-            $('#p11').toggleClass('blue');
-            $('#p12').removeAttr('class');
-
-            var c = $('#p1').css('color');
-            console.log(c);
-            $('#p2').css({
-                'color': 'red',
-                'background-color':'yellow'
-            });
-        })
-      });
-    </script>
+    <script src="../js/add_remove.js"></script>
   </body>
 </html>

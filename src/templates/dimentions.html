@@ -1,51 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dimentions</title>
     <style>
-        #div1{
-            width: 500px;
-            height: 400px;
-            border: 1px solid rebeccapurple;
-            margin: 20px;
-            padding: 10px;
-
-        }
+      #div1 {
+        width: 500px;
+        height: 400px;
+        border: 1px solid rebeccapurple;
+        margin: 20px;
+        padding: 10px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div id="div1"></div>
     <p id="p1"></p>
     <button id="btn">click</button>
-    
+
     <script src="../js/jquery.js"></script>
-    <script>
-
-        $(function(){
-            $('#btn').click(function(){
-
-
-                $('#div1').width('200px');
-                $('#div1').height('200px');
-
-                var w = $('#div1').width();
-                var h = $('#div1').height();
-                var iw = $('#div1').innerWidth();   //padding
-                var ih = $('#div1').innerHeight();  //padding
-                var ow = $('#div1').outerWidth(); // border+paddig
-                var oh = $('#div1').outerHeight();
-                var tw = $('#div1').outerWidth(true); // border+paddig+margin
-                var th = $('#div1').outerHeight(true);
-
-
-                $('#p1').html(w+'<br>'+h+'<br>'+iw+'<br>'+ih+'<br>'+ow+'<br>'+oh+'<br>'+tw+'<br>'+th);
-
-            })
-        })
-    </script>
-</body>
+    <script src="../js/dimentions.js"></script>
+  </body>
 </html>

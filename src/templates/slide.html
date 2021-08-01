@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #div1{
-            width: 100%;
-            height: 200px;
-            background-color: rosybrown;
-            display: none;
-        }
+      #div1 {
+        width: 100%;
+        height: 200px;
+        background-color: rosybrown;
+        display: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="div1"></div>
 
     <button id="btn1">slide up</button>
@@ -22,20 +22,6 @@
     <button id="btn3">slide toggle</button>
 
     <script src="../js/jquery.js"></script>
-    <script>
-        $(function(){
-            $('#btn1').click(function(){
-                $('#div1').slideUp(3000);
-            });
-            $('#btn2').click(function(){
-                $('#div1').slideDown(3000);
-            });
-            $('#btn3').click(function(){
-                $('#div1').slideToggle(3000);
-            });
-
-        })
-
-    </script>
-</body>
+    <script src="../js/slide.js"></script>
+  </body>
 </html>

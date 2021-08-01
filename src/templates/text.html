@@ -25,7 +25,7 @@
       #zumrud-div {
         mix-blend-mode: difference;
         z-index: 2;
-        margin-top: -30%;
+        margin-top: -300px;
         margin-right: 0;
         padding-right: 4%;
       }
@@ -123,23 +123,7 @@
     </div>
 
     <script src="../js/jquery.js"></script>
-    <script>
-      $(function () {
-        $(window).scroll(function () {
-          var topScroll = $(this).scrollTop();
-          console.log("top: ", topScroll);
-          var windowWidth = $(window).width();
-          $("#hello-tag").css({
-            transform: "translate3d(" + topScroll / 10 + "vw, 0%, 0px)",
-            transformStyle: "preserve-3d",
-          });
-          $("#zumrud-div").css({
-            transform: "translate3d(-" + topScroll / 10 + "vw, 0%, 0px)",
-            transformStyle: "preserve-3d",
-          });
-        });
-      });
-
+    <script src="../js/test.js">
       //https://stackoverflow.com/questions/16981763/invert-css-font-color-depending-on-background-color
     </script>
   </body>

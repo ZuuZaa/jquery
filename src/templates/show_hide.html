@@ -1,75 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #div1,#div2,#div3 {
-            width: auto;
-            height: 150px;
-            border: 1px solid blue;
-            margin: 10px 0;
-        }
+      #div1,
+      #div2,
+      #div3 {
+        width: auto;
+        height: 150px;
+        border: 1px solid blue;
+        margin: 10px 0;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div id="div1">div1</div>
     <div id="div2">div2</div>
-    <div id="div3">div3</div> 
- 
+    <div id="div3">div3</div>
+
     <button id="btn1">show</button>
     <button id="btn2">hide</button>
     <button id="btn3">toggle</button>
-    <br><br>
+    <br /><br />
     <button id="btn4">fade in</button>
     <button id="btn5">fade out</button>
     <button id="btn6">fade toggle</button>
     <button id="btn7">fade to</button>
 
     <script src="../js/jquery.js"></script>
-    <script>
-        $(function(){
-            $('#btn2').click(function(){
-                $('#div1').delay(3000).hide(3000);
-                $('#div2').hide(6000);
-                $('#div3').hide(9000); //'slow' 'fast'
-            });
-            $('#btn1').click(function(){
-                $('#div1').show(3000);
-                $('#div2').show(6000);
-                $('#div3').show(9000);
-            });
-            $('#btn3').click(function(){
-                $('#div1').toggle(3000);
-                $('#div2').toggle(6000);
-                $('#div3').toggle(9000);
-            });
-            // effect
-            $('#btn4').click(function(){
-                $('#div1').fadeIn(3000);
-                $('#div2').fadeIn(6000);
-                $('#div3').fadeIn(9000);
-            });
-            $('#btn5').click(function(){
-                $('#div1').fadeOut(3000);
-                $('#div2').fadeOut(6000);
-                $('#div3').fadeOut(9000);
-            });
-            $('#btn6').click(function(){
-                $('#div1').fadeToggle(2000);
-                $('#div2').fadeToggle(4000);
-                $('#div3').fadeToggle(6000);
-            });
-            $('#btn7').click(function(){
-                $('#div1').fadeTo(2000, 0.2);
-                $('#div2').fadeTo(4000, 0.4);
-                $('#div3').fadeTo(6000, 0.6);
-            });
-        })
-
-    </script>
-</body>
+    <script src="../js/show_hide.js"></script>
+  </body>
 </html>
